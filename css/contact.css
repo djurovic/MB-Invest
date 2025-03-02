@@ -1,0 +1,226 @@
+/* Styles for Contact page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: relative;
+}
+
+/* Create the border with padding that matches the navbar */
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 0.5px;
+    background-color: #1D3638;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 8.42px;
+    letter-spacing: 0%;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+}
+
+/* .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5px;
+    background-color: transparent;
+    z-index: 1;
+} */
+
+.nav-links a.active::after {
+    background-color: #1D3638;
+    height: 1px;
+}
+
+/* Contact page header section */
+.contact-header {
+    padding: 60px 10%;
+}
+
+.contact-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60.95px;
+    letter-spacing: -1.26px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #EE5830 0%, #1D3638 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-line {
+    height: 3px;
+    width: 200px;
+    background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
+    margin-bottom: 40px;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* Footer styles */
+footer {
+    background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
+    color: white;
+    padding: 50px 0 20px;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.to-top {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 16px;
+}
+
+.newsletter {
+    margin-top: 20px;
+}
+
+.email-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.email-form input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.email-form button {
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 10px;
+}

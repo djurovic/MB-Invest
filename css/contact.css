@@ -6,6 +6,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #f9f9f9;
 }
 
 .navbar {
@@ -94,6 +95,52 @@ body {
     width: 200px;
     background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
     margin-bottom: 40px;
+}
+
+.contact-description {
+    font-size: 20px;
+    line-height: medium;
+    color: #000000;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.contact-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    min-width: 250px;
+    flex: 1;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #EE5830;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.contact-info-item p {
+    margin: 0;
+    color: #1D3638;
+    font-weight: 300;
+    line-height: 24.38px;
+    font-size: 20px;
 }
 
 main {

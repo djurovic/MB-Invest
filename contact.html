@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">MB INVEST GROUP</div>
+            <div class="logo"><img src="assets/LogoDark.svg" alt=""></div>
             <div class="nav-links">
                 <a href="./index.html">HOME</a>
                 <a href="./about.html">ABOUT US</a>
@@ -32,34 +32,85 @@
             
             <div class="contact-info-container">
                 <div class="contact-info-item">
-                    <div class="contact-icon">
+                    <!-- <div class="contact-icon">
                         <i class="fas fa-phone"></i>
-                    </div>
+                    </div> -->
+                    <img src="./assets/contact/call.svg" alt="">
                     <p>+381 65 32 14 63</p>
                 </div>
                 
                 <div class="contact-info-item">
-                    <div class="contact-icon">
+                    <!-- <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
-                    </div>
+                    </div> -->
+                    <img src="./assets/contact/sms.svg" alt="">
                     <p>b.lazovic@gmail.com</p>
                 </div>
                 
                 <div class="contact-info-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
+                    <!-- <div class="contact-icon"> -->
+                        <img src="./assets/contact/Location Icon.svg" alt="">
+                    <!-- </div> -->
                     <p>Sremskog fronta 10 32 300, Gornji Milanovac, Srbija</p>
                 </div>
             </div>
         </section>
+
+        <!-- Dobro dosli i mapa section -->
+        <section class="contact-form-section">
+            <div class="contact-form-container">
+                <div class="form-side">
+                    <h2 class="welcome-title">Dobrodošli!</h2>
+                    <div class="gradient-line"></div>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Ime i prezime" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Poruka" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group checkbox-container">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Informiši me o novim mogućnostima</label>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn">POŠALJI</button>
+                        </div>
+                    </form>
+                    
+                    <div class="social-icons">
+                        <a href="" class="social-icon-link"><img src="./assets/contact/Instagram.svg" alt="Instagram" class="social-icon-img"></a>
+                        <a href="" class="social-icon-link"><img src="./assets/contact/Twitter.svg" alt="Twitter" class="social-icon-img"></a>
+                        <a href="" class="social-icon-link"><img src="./assets/contact/Facebook.svg" alt="Facebook" class="social-icon-img"></a>
+                        <a href="" class="social-icon-link"><img src="./assets/contact/Youtube.svg" alt="Youtube" class="social-icon-img"></a>
+                    </div>
+                </div>
+                
+                <div class="map-side">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d716.9811182806029!2d20.47947862857447!3d44.04361556218596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475741c533e15a3d%3A0xc98d69171b93bcf9!2z0KHRgNC10LzRgdC60L7QsyDRhNGA0L7QvdGC0LAgMTAsINCT0L7RgNGa0Lgg0JzQuNC70LDQvdC-0LLQsNGG!5e0!3m2!1ssr!2srs!4v1741031221259!5m2!1ssr!2srs" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
     </main>
 
 
     <footer>
         <div class="footer-content">
             <div class="footer-top">
-                <div class="footer-logo">MB INVEST GROUP</div>
+                <div class="footer-logo"><img src="./assets/Logo.svg" alt=""></div>
                 <a href="#" class="to-top"><i class="fas fa-chevron-up"></i></a>
             </div>
             
@@ -115,5 +166,7 @@
             </div>
         </div>
     </footer>
+
+<script src="./js/contact.js"></script>
 </body>
 </html>

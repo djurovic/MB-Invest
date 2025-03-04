@@ -5,9 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MB Invest</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1>Index works!</h1>
-    <a href="./contact.html">Kontakt</a>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="assets/Logo.svg" alt=""></div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="./index.html" class="active">HOME</a>
+                <a href="./about.html" >ABOUT US</a>
+                <a href="./projects.html">PROJECT</a>
+                <a href="./apartments.html">APARTMENTS</a>
+                <a href="./contact.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-header"><span style="font-family: Montserrat;
+                    font-weight: 300;
+                    font-size: 64px;
+                    line-height: Display Small/Line Height;
+                    letter-spacing: 0%;
+                    ">Pronađi</span><br><span style="font-family: Montserrat;
+font-weight: 700;
+font-size: 64px;
+line-height: Display Small/Line Height;
+letter-spacing: 0%;
+"> Idealan Dom</span> <br><span style="font-family: Montserrat;
+font-weight: 300;
+font-size: 64px;
+line-height: Display Small/Line Height;
+letter-spacing: 0%;
+"> Za Tebe</span></h1>
+                <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Spratova</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50</div>
+                        <div class="stat-label">Stanova</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container">
+            <div class="left-section">
+               <img src="./assets/about/Slike.png" alt="Modern Buildings" class="buildings-image">
+            </div>
+            
+            <div class="right-section">
+                <div class="gradient-line"></div>
+                <h1 class="title">O nama</h1>
+                <div class="description">
+                    <p>MB Invest Group je mlada, ali ambiciozna građevinska kompanija posvećena izgradnji kvalitetnih i modernih stambenih objekata. Naš cilj je da kroz savremene tehnološke pristupe i pažljivo odabrane materijale stvorimo siguran i udoban dom za buduće vlasnike.</p>
+                    <br>
+                    <p>Sa timom iskusnih stručnjaka i vizijom koja se oslanja na inovativnost, kvalitet i pouzdanost, gradimo temelje za budućnost. Naš prvi projekat predstavlja spoj funkcionalnosti i estetike, prilagođen savremenim potrebama stanovanja.</p>
+                </div>
+                <button class="btn-more">SAZNAJ VIŠE</button>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo"><img src="./assets/Logo.svg" alt=""></div>
+                <a href="#" class="to-top"><i class="fas fa-chevron-up"></i></a>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-main">
+                <div class="footer-column">
+                    <h3>Brzo do</h3>
+                    <ul>
+                        <li><a href="./about.html">O nama</a></li>
+                        <li><a href="./apartments.html">Prodaja stanova</a></li>
+                        <li><a href="./projects.html">Projekat</a></li>
+                        <li><a href="#">Licence</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Adresa</h3>
+                    <p>Sremskog fronta 10</p>
+                    <p>32 300, Gornji Milanovac</p>
+                    <p>Srbija</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <p>b.lazovic@gmail.com</p>
+                    <p>+381 65 32 14 63</p>
+                </div>
+                
+                <div class="footer-column">
+                    <p>Pronađi nas</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <p>Tvoj e-mail</p>
+                        <div class="email-form">
+                            <input type="email" placeholder="">
+                            <button type="submit">pošalji</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p>Copyright © 2025 MB Invest Group</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="./js/landing.js"></script>
 </body>
 </html>

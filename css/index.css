@@ -111,7 +111,7 @@ body {
     z-index: 2;
     max-width: 1200px;
     margin: 0;
-    margin-left: 150px;
+    margin-left: 8.5%;
     padding: 0 20px;
 }
 
@@ -121,6 +121,24 @@ body {
     line-height: 1.2;
     margin-bottom: 20px;
     text-transform: uppercase;
+}
+
+.hero-span-small {
+    /* font-family: Montserrat; */
+    font-weight: 300;
+    font-size: 64px;
+    /* line-height: Display Small/Line Height; */
+    letter-spacing: 0%;
+    
+}
+
+.hero-span-big {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: Display Small/Line Height;
+    letter-spacing: 0%;
+    
 }
 
 .hero-text {
@@ -232,6 +250,70 @@ body {
 }
 
 
+
+/* Why us section */
+
+.why-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60.95px;
+    letter-spacing: -1.26px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature {
+    text-align: center;
+    flex: 1;
+}
+
+/* .feature-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #EE5830;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.feature-icon img {
+    width: 40px;
+    height: 40px;
+} */
+
+.feature-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29.26px;
+    letter-spacing: -0.5px;
+    color: #EE5830;
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+    color: #333;
+}
 
 /* Footer styles */
 footer {
@@ -405,7 +487,7 @@ footer {
         right: -100%;
         width: 250px;
         height: 100vh;
-        background-color: #063256;
+        background-color: #163541;
         flex-direction: column;
         padding: 80px 20px 20px;
         gap: 30px;
@@ -485,6 +567,16 @@ footer {
     }
     .hero-content {
         margin: 0 auto;
+    }
+
+    /* Why us section */
+    .section-title {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .features-container {
+        flex-direction: column;
     }
 
     /*footer*/

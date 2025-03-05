@@ -94,7 +94,7 @@ body {
     background-position: center;
     color: white;
     display: flex;
-    align-items: center;
+    align-items: top;
 }
 
 .hero-overlay {
@@ -249,6 +249,96 @@ body {
     color: white;
 }
 
+/* Offer section*/
+
+/* .offer-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    background-image: url('../assets/landing/offerBackground.png');
+    background-size: auto 100%;
+    background-position: bottom -240px right 20px;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.offer-container::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+        circle at bottom right, 
+        #FEBAAA 0%, 
+        #FEBAAA 50%, 
+        transparent 50%
+    );
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.offer-left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /*background: rgba(255, 255, 255, 0.9);
+    background: transparent;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.offer-right-section {
+    flex: 1;
+    position: relative;
+    text-align: right;
+    z-index: 2;
+}
+
+.offer-sizes {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 50px;
+}
+
+.offer-size {
+    margin-bottom: 30px;
+}
+
+.offer-size-small {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 43.88px;
+    letter-spacing: -1.26px;
+    color: #EE5830;
+}
+
+.offer-size-large {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60.95px;
+    letter-spacing: -1.26px;
+}
+
+.offer-size-large.gradient-text {
+    background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
 
 
 /* Why us section */
@@ -280,21 +370,7 @@ body {
     flex: 1;
 }
 
-/* .feature-icon {
-    width: 80px;
-    height: 80px;
-    background-color: #EE5830;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-}
 
-.feature-icon img {
-    width: 40px;
-    height: 40px;
-} */
 
 .feature-title {
     font-family: 'Montserrat', sans-serif;
@@ -555,6 +631,16 @@ footer {
         width: 100%;
     }
     
+    .offer-left-section {
+        width: 100%;
+    }
+
+    .offer-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
     .title {
         font-size: 40px;
         line-height: 48px;

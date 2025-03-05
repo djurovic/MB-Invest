@@ -1,11 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Projekti</title>
 </head>
+
 <body>
-    <h1>Projekat</h1>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="assets/LogoNav.svg" alt=""></div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="./index.html">HOME</a>
+                <a href="./about.html">ABOUT US</a>
+                <a href="./projects.html" class="active">PROJECT</a>
+                <a href="./apartments.html">APARTMENTS</a>
+                <a href="./contact.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-header"><span class="hero-span-small">Pronađi</span><br><span class="hero-span-big">
+                        Idealan Dom</span> <br><span class="hero-span-small"> Za Tebe</span></h1>
+                <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Spratova</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50</div>
+                        <div class="stat-label">Stanova</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O projektu -->
+        <div class="container">
+            <div class="left-section">
+                <img src="./assets/projects/OProjektuImage.png" alt="Modern Buildings" class="buildings-image">
+            </div>
+
+            <div class="right-section">
+                <h1 class="title">O projektu</h1>
+                <div class="gradient-line"></div>
+                <div class="description">
+                    Predstavljamo vam <span class="description-span">prvi projekat naše kompanije</span> – <br>
+                    modernu stambenu zgradu smeštenu na mirnoj<br>
+                    lokaciji u blizini grada, idealnoj za porodičan život<br>
+                    i savremeni urbani stil.<br>
+                    Ovaj pažljivo osmišljen kompleks nudi kvalitetnu<br>
+                    gradnju po visokim standardima, a stanarima pruža<br>
+                    osećaj privatnosti i komfora uz odličnu povezanost sa<br>
+                    svim delovima grada. U neposrednoj blizini nalazi se<br>
+                    tržni centar, dok su lokali u prizemlju zgrade<br>
+                    namenjeni prodavnicama i drugim sadržajima koji<br>
+                    će dodatno olakšati svakodnevni život.</p>
+                </div>
+                
+            </div>
+        </div>
+        <!-- mala galerija -->
+
+        <!-- Plan projekta -->
+        <div class="plan-container">
+            <div class="plan-title-wrapper">
+                <h1 class="plan-title">Plan objekta</h1>
+            </div>
+            
+            <!-- Optional gradient line -->
+            <div class="plan-gradient-line"></div>
+            
+            <div class="plan-description">
+                <p>Stambena zgrada modernog dizajna prostire se na četiri sprata i obuhvata 50 stanova različitih struktura, prilagođenih savremenim potrebama stanovanja.</p>
+                <p>Svaki stan poseduje prostran balkon, dok su u prizemlju planirani lokali koji će doprineti funkcionalnosti celog kompleksa.</p>
+                <br>
+                <p>Posebna pažnja posvećena je komforu stanara – zgrada raspolaže privatnim parkingom, a lokacija pruža mirno okruženje uz odličnu povezanost sa gradom. Idealan spoj kvalitetne gradnje, praktičnog rasporeda i dostupnih sadržaja čini ovaj objekat savršenim mestom za život.</p>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo"><img src="./assets/Logo.svg" alt=""></div>
+                <a href="#" class="to-top"><i class="fas fa-chevron-up"></i></a>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-main">
+                <div class="footer-column">
+                    <h3>Brzo do</h3>
+                    <ul>
+                        <li><a href="./about.html">O nama</a></li>
+                        <li><a href="./apartments.html">Prodaja stanova</a></li>
+                        <li><a href="./projects.html">Projekat</a></li>
+                        <li><a href="#">Licence</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Adresa</h3>
+                    <p>Sremskog fronta 10</p>
+                    <p>32 300, Gornji Milanovac</p>
+                    <p>Srbija</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <p>b.lazovic@gmail.com</p>
+                    <p>+381 65 32 14 63</p>
+                </div>
+
+                <div class="footer-column">
+                    <p>Pronađi nas</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+
+                    <div class="newsletter">
+                        <p>Tvoj e-mail</p>
+                        <div class="email-form">
+                            <input type="email" placeholder="">
+                            <button type="submit">pošalji</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2025 MB Invest Group</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="./js/projects.js"></script>
 </body>
+
 </html>

@@ -94,7 +94,7 @@ body {
     background-position: center;
     color: white;
     display: flex;
-    align-items: center;
+    align-items: top;
 }
 
 .hero-overlay {

@@ -1,3 +1,7 @@
+#message {
+    resize: none;
+}
+
 /* Styles for Contact page */
 body {
     margin: 0;
@@ -160,20 +164,19 @@ main {
 /* Dobro dosli i mapa css*/
 .contact-form-section {
     font-family: 'Montserrat', sans-serif;
-    padding: 50px 0;
+    padding: 60px 10%;
     background-color: #f9f9f9;
 }
 
 .contact-form-container {
     display: flex;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     gap: 30px;
 }
 
 .form-side {
     flex: 1;
-    padding: 0 20px;
 }
 
 .welcome-title {

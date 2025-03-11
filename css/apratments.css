@@ -1,3 +1,380 @@
-h1 {
-    color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+}
+
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: relative;
+}
+
+/* Create the border with padding that matches the navbar */
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 0.5px;
+    background-color: #1D3638;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 8.42px;
+    letter-spacing: 0%;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+}
+
+.nav-links a.active::after {
+    background-color: #1D3638;
+    height: 1px;
+}
+
+/* Mobile menu button - hidden by default */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: #1D3638;
+    transition: all 0.3s ease;
+}
+/*Kraj navbar*/
+
+
+
+
+/* Footer  */
+footer {
+    background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
+    color: white;
+    padding: 50px 0 20px;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.to-top {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 16px;
+}
+
+.newsletter {
+    margin-top: 20px;
+}
+
+.email-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.email-form input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.email-form button {
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 10px;
+}
+/* Kraj footera */
+
+/*Responsive*/
+@media screen and (max-width: 1200px) {
+    /* Footer */
+    .footer-content {
+        width: 90%;
+    }
+    /* Kraj footera */
+}
+
+@media screen and (max-width: 992px) {
+    /* Navbar */
+    .navbar {
+        padding: 20px 5%;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .navbar::after {
+        left: 5%;
+        right: 5%;
+    }
+    /* Kraj navbar */
+
+    /* Footer */
+    .footer-column {
+        flex-basis: 50%;
+        min-width: unset;
+    }
+    /* Kraj footera */
+}
+
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        gap: 30px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+    }
+    
+    /* Transform hamburger to X when menu is open */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    /* Overlay when menu is open */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+    
+    .overlay.active {
+        display: block;
+    }
+    /* Kraj navbara */
+
+
+
+    
+
+    /* Footer */
+    .footer-content {
+        width: 95%;
+    }
+    
+    .footer-main {
+        margin: 20px 0;
+    }
+    
+    .footer-column {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    /* Kraj footera */
+}
+
+@media screen and (max-width: 576px) {
+    /* Footer */
+    footer {
+        padding: 30px 0 15px;
+    }
+    
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .email-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .email-form button {
+        align-self: flex-start;
+    }
+    
+    .footer-column {
+        margin-bottom: 25px;
+    }
+    
+    .social-icons {
+        justify-content: flex-start;
+    }
+    /* Kraj footera */
+}
+
+@media screen and (max-width: 480px) {
+    /* Navbar */
+    .navbar {
+        padding: 15px 5%;
+    }    
+
+    .logo img {
+        max-width: 120px;
+    }
+    
+    .nav-links {
+        width: 220px;
+    }
+
+    /* Kraj navbar */
 }

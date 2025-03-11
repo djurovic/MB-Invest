@@ -154,27 +154,51 @@ body {
 }
 
 .stat {
-    display: flex;
-    align-items: flex-end;
+    position: relative;
+    display: inline-block;
 }
 
 .stat-number {
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(6rem, 12vw, 14rem);
     font-weight: 700;
     color: #D9D9D9;
-    margin-right: 15px;
+    line-height: 1;
 }
 
 .stat-label {
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     text-transform: uppercase;
+    color: white;
+    font-weight: 500; /* Made slightly bolder to stand out */
+    padding: 5px 15px;
+    z-index: 2;
+    mix-blend-mode: multiply; /* This helps blend with background while hiding content behind */
+    backdrop-filter: blur(2px); /* Slight blur effect for better readability */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Text shadow to help readability */
+}
+
+.stat-label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(29, 54, 56, 0.4), rgba(29, 54, 56, 0.7));
+    z-index: -1;
 }
 
 /*O nama*/
 .container {
     display: flex;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
     padding: 20px;
     gap: 50px;
     align-items: center;

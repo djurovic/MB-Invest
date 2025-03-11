@@ -84,6 +84,9 @@ body {
     background-color: #1D3638;
     transition: all 0.3s ease;
 }
+/*Kraj navbar*/
+
+
 
 /* Contact page header section */
 .contact-header {
@@ -170,13 +173,14 @@ main {
 
 .contact-form-container {
     display: flex;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0;
-    gap: 30px;
+    gap: 100px;
 }
 
 .form-side {
     flex: 1;
+    padding-right: 15%;
 }
 
 .welcome-title {
@@ -190,6 +194,7 @@ main {
     background-clip: text;
     color: transparent;
     margin-bottom: 10px;
+    margin-top: -4px;
 }
 
 .contact-form .form-group {
@@ -267,7 +272,7 @@ main {
 }
 
 
-/* Footer styles */
+/* Footer  */
 footer {
     background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
     color: white;
@@ -395,17 +400,20 @@ footer {
     font-size: 12px;
     padding-top: 10px;
 }
+/* Kraj footera */
 
 
 /*Responsive*/
 @media screen and (max-width: 1200px) {
+    /* Footer */
     .footer-content {
         width: 90%;
     }
+    /* Kraj footera */
 }
 
 @media screen and (max-width: 992px) {
-
+    /* Navbar */
     .navbar {
         padding: 20px 5%;
     }
@@ -418,17 +426,20 @@ footer {
         left: 5%;
         right: 5%;
     }
+    /* Kraj navbar */
 
+    /* Footer */
     .footer-column {
         flex-basis: 50%;
         min-width: unset;
     }
+    /* Kraj footera */
 }
 
 
 @media (max-width: 768px) {
 
-
+    /* Navbar */
     .menu-toggle {
         display: block;
     }
@@ -485,14 +496,20 @@ footer {
     .overlay.active {
         display: block;
     }
+    /* Kraj navbara */
+
+
+
     .contact-form-container {
         flex-direction: column;
     }
     
     .map-side {
-        height: 300px;
+        flex: unset;
+        height: 450px;
     }
 
+    /* Footer */
     .footer-content {
         width: 95%;
     }
@@ -505,9 +522,11 @@ footer {
         flex-basis: 100%;
         margin-bottom: 30px;
     }
+    /* Kraj footera */
 }
 
 @media screen and (max-width: 576px) {
+    /* Footer */
     footer {
         padding: 30px 0 15px;
     }
@@ -534,13 +553,15 @@ footer {
     .social-icons {
         justify-content: flex-start;
     }
+    /* Kraj footera */
 }
 
 @media screen and (max-width: 480px) {
+    /* Navbar */
     .navbar {
         padding: 15px 5%;
-    }
-    
+    }    
+
     .logo img {
         max-width: 120px;
     }
@@ -548,4 +569,6 @@ footer {
     .nav-links {
         width: 220px;
     }
+
+    /* Kraj navbar */
 }

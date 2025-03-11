@@ -79,88 +79,105 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Galerija
 document.addEventListener('DOMContentLoaded', function() {
-    // Images array - replace with your actual image paths
-    const basePath = 'assets/projects/galerija1/'
-
-    const images = [
-                basePath + 'slika1.png',
-                basePath + 'slika2.png',
-                basePath + 'slika3.png',
-                basePath + 'slika4.png',
-                basePath + 'slika5.png',
-                basePath + 'slika6.png',
-                basePath + 'slika7.png'
-            ];
-    
-    const carousel = document.getElementById('imageCarousel');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    
-    let currentIndex = 0;
-    
-    // Create image containers
-    function createImageElement(src, className) {
-        const container = document.createElement('div');
-        container.className = 'image-container ' + className;
+    // Gallery creation function
+    function createGallery(carouselId, prevBtnId, nextBtnId, imagesArray) {
+        const carousel = document.getElementById(carouselId);
+        const prevBtn = document.getElementById(prevBtnId);
+        const nextBtn = document.getElementById(nextBtnId);
         
-        const img = document.createElement('img');
-        img.src = src;
-        img.className = 'gallery-image';
-        img.alt = 'Gallery Image';
+        let currentIndex = 0;
         
-        container.appendChild(img);
-        return container;
+        // Create image containers
+        function createImageElement(src, className) {
+            const container = document.createElement('div');
+            container.className = 'image-container ' + className;
+            
+            const img = document.createElement('img');
+            img.src = src;
+            img.className = 'gallery-image';
+            img.alt = 'Gallery Image';
+            
+            container.appendChild(img);
+            return container;
+        }
+        
+        // Initial setup
+        function initializeCarousel() {
+            // Clear carousel
+            carousel.innerHTML = '';
+            
+            // Calculate indices with wrapping
+            const leftIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+            const rightIndex = (currentIndex + 1) % imagesArray.length;
+            
+            // Add images
+            carousel.appendChild(createImageElement(imagesArray[leftIndex], 'left'));
+            carousel.appendChild(createImageElement(imagesArray[currentIndex], 'center'));
+            carousel.appendChild(createImageElement(imagesArray[rightIndex], 'right'));
+        }
+        
+        // Update carousel
+        function updateCarousel() {
+            const imageContainers = carousel.querySelectorAll('.image-container');
+            
+            // Calculate indices with wrapping
+            const leftIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+            const rightIndex = (currentIndex + 1) % imagesArray.length;
+            
+            // Update image sources
+            imageContainers[0].querySelector('img').src = imagesArray[leftIndex];
+            imageContainers[1].querySelector('img').src = imagesArray[currentIndex];
+            imageContainers[2].querySelector('img').src = imagesArray[rightIndex];
+        }
+        
+        // Initialize
+        initializeCarousel();
+        
+        // Event listeners for buttons
+        prevBtn.addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+            updateCarousel();
+        });
+        
+        nextBtn.addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % imagesArray.length;
+            updateCarousel();
+        });
     }
     
-    // Initial setup
-    function initializeCarousel() {
-        // Clear carousel
-        carousel.innerHTML = '';
-        
-        // Calculate indices with wrapping
-        const leftIndex = (currentIndex - 1 + images.length) % images.length;
-        const rightIndex = (currentIndex + 1) % images.length;
-        
-        // Add images
-        carousel.appendChild(createImageElement(images[leftIndex], 'left'));
-        carousel.appendChild(createImageElement(images[currentIndex], 'center'));
-        carousel.appendChild(createImageElement(images[rightIndex], 'right'));
-    }
+    // First gallery images
+    const gallery1Images = [
+        'assets/projects/galerija1/slika1.png',
+        'assets/projects/galerija1/slika2.png',
+        'assets/projects/galerija1/slika3.png',
+        'assets/projects/galerija1/slika4.png',
+        'assets/projects/galerija1/slika5.png',
+        'assets/projects/galerija1/slika6.png',
+        'assets/projects/galerija1/slika7.png'
+    ];
     
-    // Update carousel
-    function updateCarousel() {
-        const imageContainers = document.querySelectorAll('.image-container');
-        
-        // Calculate indices with wrapping
-        const leftIndex = (currentIndex - 1 + images.length) % images.length;
-        const rightIndex = (currentIndex + 1) % images.length;
-        
-        // Update image sources
-        imageContainers[0].querySelector('img').src = images[leftIndex];
-        imageContainers[1].querySelector('img').src = images[currentIndex];
-        imageContainers[2].querySelector('img').src = images[rightIndex];
-    }
+    // Second gallery images - replace with your actual image paths
+    const gallery2Images = [
+        'assets/projects/galerija2/slika1.png',
+        'assets/projects/galerija2/slika2.png',
+        'assets/projects/galerija2/slika3.png',
+        'assets/projects/galerija2/slika4.png',
+        'assets/projects/galerija2/slika5.png',
+        'assets/projects/galerija2/slika6.png',
+        'assets/projects/galerija2/slika7.png'
+    ];
     
-    // Initialize
-    initializeCarousel();
+    // Initialize both galleries
+    createGallery('imageCarousel1', 'prevBtn1', 'nextBtn1', gallery1Images);
+    createGallery('imageCarousel2', 'prevBtn2', 'nextBtn2', gallery2Images);
     
-    // Event listeners for buttons
-    prevBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateCarousel();
-    });
-    
-    nextBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateCarousel();
-    });
-    
-    // Keyboard navigation
+    // Keyboard navigation - only for the first gallery or currently focused gallery
     document.addEventListener('keydown', function(e) {
+        // You may want to implement logic to determine which gallery is currently in focus
         if (e.key === 'ArrowLeft') {
-            prevBtn.click();
+            document.getElementById('prevBtn1').click();
         } else if (e.key === 'ArrowRight') {
-            nextBtn.click();
+            document.getElementById('nextBtn1').click();
         }
     });
 });

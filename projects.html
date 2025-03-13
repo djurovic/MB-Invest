@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="./css/projects.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="./assets/TabIcon.svg" type="image/x-icon" />
+        <!-- Default icon (for light mode) -->
+        <link rel="icon" href="./assets/TabIconDark.svg" type="image/x-icon" media="(prefers-color-scheme: light)" />
+
+        <!-- Dark mode icon -->
+        <link rel="icon" href="./assets/TabIcon.svg" type="image/x-icon" media="(prefers-color-scheme: dark)" />
+    
+        <!-- Fallback icon (for browsers that don't support media queries on link elements) -->
+        <link rel="icon" href="./assets/TabIconDark.svg" type="image/x-icon" />
     <title>Projekti</title>
 </head>
 
@@ -34,21 +41,11 @@
         <section class="hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-header"><span class="hero-span-small">Pronađi</span><br><span class="hero-span-big">
-                        Idealan Dom</span> <br><span class="hero-span-small"> Za Tebe</span></h1>
-                <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">5</div>
-                        <div class="stat-label">Spratova</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">50</div>
-                        <div class="stat-label">Stanova</div>
-                    </div>
+                <h1 class="project-title">PROJEKAT 1</h1>
+                <p class="project-subtitle">(Naziv objekta, adresa,slika)</p>
+                <div class="project-quote">
+                    <p>Verujemo da je ovo samo početak jedne uspešne priče i posvećeni smo tome
+                    da naš prvi projekat bude sinonim za kvalitet, funkcionalnost i pristupačnost.</p>
                 </div>
             </div>
         </section>

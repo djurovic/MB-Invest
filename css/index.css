@@ -251,7 +251,7 @@ body {
 
 /* Offer section*/
 
-/* .offer-container {
+.offer-container {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
@@ -265,9 +265,10 @@ body {
     background-repeat: no-repeat;
     min-height: 500px;
     overflow: hidden;
+    /* align-items: flex-end; */
 }
 
-.offer-container::after {
+/* .offer-container::after {
     content: '';
     position: absolute;
     bottom: -100px;
@@ -284,13 +285,13 @@ body {
     border-radius: 50%;
     z-index: 1;
     opacity: 0.7;
-}
+} */
 
 .offer-left-section {
     flex: 1;
     display: flex;
     flex-direction: column;
-    /*background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     background: transparent;
     padding: 30px;
     border-radius: 10px;
@@ -300,20 +301,28 @@ body {
 .offer-right-section {
     flex: 1;
     position: relative;
-    text-align: right;
+    /* text-align: right; */
     z-index: 2;
 }
 
 .offer-sizes {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
     padding-right: 50px;
 }
 
 .offer-size {
     margin-bottom: 30px;
+}
+
+.offer-size-first {
+    margin-left: 14ch; /* Adds space before the first item */
+}
+
+.offer-size-second {
+    margin-left: 0; /* No extra space for the second item */
+}
+
+.offer-size-third {
+    margin-left: 15ch; /* Adds space before the third item */
 }
 
 .offer-size-small {
@@ -337,7 +346,7 @@ body {
     background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-} */
+}
 
 
 
@@ -639,6 +648,35 @@ footer {
         flex-direction: column;
         gap: 30px;
         padding: 20px;
+    }
+
+    .offer-sizes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+    
+    .offer-size {
+        margin-bottom: 20px; /* Reduced vertical spacing between stacked items */
+        width: 100%;
+        text-align: center;
+    }
+    
+    .offer-size-first,
+    .offer-size-second,
+    .offer-size-third {
+        margin-left: 0; /* Remove the indentation for all items */
+    }
+    
+    .offer-size-small {
+        font-size: 24px; /* Smaller font size for mobile */
+        line-height: 30px;
+    }
+    
+    .offer-size-large {
+        font-size: 32px; /* Smaller font size for mobile */
+        line-height: 40px;
     }
 
     .title {

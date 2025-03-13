@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="./css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="./assets/TabIcon.svg" type="image/x-icon" />
+    <!-- Default icon (for light mode) -->
+    <link rel="icon" href="./assets/TabIconDark.svg" type="image/x-icon" media="(prefers-color-scheme: light)" />
+
+    <!-- Dark mode icon -->
+    <link rel="icon" href="./assets/TabIcon.svg" type="image/x-icon" media="(prefers-color-scheme: dark)" />
+
+    <!-- Fallback icon (for browsers that don't support media queries on link elements) -->
+    <link rel="icon" href="./assets/TabIconDark.svg" type="image/x-icon" />
 </head>
 <body>
     <header>
@@ -68,7 +75,7 @@
         </div>
 
         <!-- Our offer -->
-        <!-- <div class="offer-container">
+        <div class="offer-container">
             <div class="offer-left-section">
                 <div class="gradient-line"></div>
                 <h1 class="title">Šta nudimo?</h1>
@@ -82,22 +89,19 @@
 
             <div class="offer-right-section">
                 <div class="offer-sizes">
-                    <div class="offer-size">
-                        <div class="offer-size-small">10x</div>
-                        <div class="offer-size-large gradient-text" style="color: #EE5830;">72m2</div>
+                    <div class="offer-size offer-size-first">
+                        <div class="offer-size-large gradient-text" style="color: #EE5830;"><span class="offer-size-small">10x&nbsp;&nbsp;</span>72m2</div>
                     </div>
-                    <div class="offer-size">
-                        <div class="offer-size-small">20x</div>
-                        <div class="offer-size-large gradient-text">160m2</div>
+                    <div class="offer-size offer-size-second">
+                        <div class="offer-size-large gradient-text"><span class="offer-size-small">20x&nbsp;&nbsp;</span>160m2</div>
                     </div>
-                    <div class="offer-size">
-                        <div class="offer-size-small">5x</div>
-                        <div class="offer-size-large gradient-text" style="color: #EE5830;">320m2</div>
+                    <div class="offer-size offer-size-third">
+                        <div class="offer-size-large gradient-text" style="color: #EE5830;"><span class="offer-size-small">5x&nbsp;&nbsp;</span>320m2</div>
                     </div>
                 </div>
             </div>
             
-        </div> -->
+        </div>
 
         <!-- Why us section -->
         <section class="why-section">

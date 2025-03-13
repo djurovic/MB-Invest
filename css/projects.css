@@ -94,7 +94,8 @@ body {
     background-position: center;
     color: white;
     display: flex;
-    align-items: top;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-overlay {
@@ -110,64 +111,38 @@ body {
     position: relative;
     z-index: 2;
     max-width: 1200px;
-    margin: 0;
-    margin-left: 8.5%;
+    text-align: center;
     padding: 0 20px;
 }
 
-.hero-header {
-    font-size: clamp(2.5rem, 6vw, 5rem);
+.project-title {
+    font-family: Montserrat;
+    font-size: 64px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-.hero-span-small {
-    font-family: Montserrat; 
-    font-weight: 300;
-    font-size: 64px;
-    line-height: Display Small/Line Height; 
-    letter-spacing: 0%;
-    
-}
-
-.hero-span-big {
+.project-subtitle {
     font-family: Montserrat;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: Display Small/Line Height;
-    letter-spacing: 0%;
-    
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 40px;
 }
 
-.hero-text {
-    max-width: 600px;
-    margin-bottom: 30px;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    line-height: 1.6;
+.project-quote {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.hero-stats {
-    display: flex;
-    gap: 50px;
-}
-
-.stat {
-    display: flex;
-    align-items: flex-end;
-}
-
-.stat-number {
-    font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 700;
-    color: #D9D9D9;
-    margin-right: 15px;
-}
-
-.stat-label {
-    font-size: clamp(0.8rem, 2vw, 1rem);
-    text-transform: uppercase;
+.project-quote p {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 0px;
 }
 
 /* O projektu */

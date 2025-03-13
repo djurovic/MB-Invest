@@ -77,26 +77,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function updateFavicon() {
-    const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const faviconHref = darkMode ? "./assets/TabIconDark.svg" : "./assets/TabIcon.svg";
-  
-    let favicon = document.querySelector("link[rel='icon']");
-    if (favicon) {
-      favicon.remove(); // Remove the existing favicon
-    }
-  
-    const newFavicon = document.createElement("link");
-    newFavicon.rel = "icon";
-    newFavicon.href = faviconHref;
-    document.head.appendChild(newFavicon);
-  
-    console.log("Favicon updated to:", faviconHref); // Debugging
-  }
-  
-  // Run on page load
-  updateFavicon();
-  
-  // Listen for theme changes
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateFavicon);
-  

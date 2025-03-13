@@ -83,8 +83,198 @@ body {
 }
 /*Kraj navbar*/
 
+/* Vas dom */
+/* O projektu */
+.home-section {
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    padding: 20px 10%;
+    background-color: #f9f9f9;
+    margin-bottom: 100px;
+}
 
+.section-title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: -1.26px;
+    background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
 
+.gradient-line {
+    width: 169px;
+    height: 4px;
+    background: linear-gradient(90deg, #EE5830 0%, #1D3638 94.96%);
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+.main-description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 900px;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+.btn-more {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    padding: 12px 30px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1D3638;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid;
+    border-image: linear-gradient(90deg, #EE5830 0%, #1D3638 94.96%) 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-more:hover {
+    background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
+    color: white;
+}
+/* Kraj vas dom */
+/* Stanovi */
+.container {
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    padding: 20px 10%;
+    margin-bottom: 100px;
+}
+
+.floor-indicator {
+    width: 243px;
+    height: 76px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid;
+    border-image: linear-gradient(90deg, #EE5830 0%, #1D3638 94.96%) 1;
+    font-weight: 400;
+    font-size: 24px;
+    color: #1D3638;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.floor-indicator:hover {
+    background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
+    color: white;
+}
+
+.floor-indicator:hover svg {
+    fill: white;
+}
+
+.floor-indicator span {
+    font-weight: 500;
+    margin-right: -60px;
+}
+
+.floor-indicator svg {
+    width: 20px;
+    height: 20px;
+    fill: #1D3638;
+    transition: fill 0.3s ease;
+}
+
+.apartments-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.apartment-card {
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.apartment-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.arrow-button {
+    position: absolute;
+    right: 5px;
+    bottom: 124px;
+    width: 30px;
+    height: 35px;
+    background-color: #E65731;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    border: 1px solid white;
+}
+
+.arrow-button svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.apartment-info {
+    padding: 15px;
+}
+
+.apartment-type {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -1.26px;
+    margin: 0 0 10px 0;
+}
+
+.apartment-floor {
+    font-weight: 200;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -1.26px;
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+.apartment-size {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -1.26px;
+    margin: 0;
+}
 
 /* Footer  */
 footer {
@@ -218,6 +408,10 @@ footer {
 
 /*Responsive*/
 @media screen and (max-width: 1200px) {
+    /* Stanovi */
+    .apartments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
     /* Footer */
     .footer-content {
         width: 90%;
@@ -310,10 +504,29 @@ footer {
         display: block;
     }
     /* Kraj navbara */
-
-
-
+    /* Vas dom */
+    .home-section {
+        padding: 20px 5%;
+    }
+    .section-title {
+        font-size: 36px;
+    }
     
+    .main-description,
+    .contact-text {
+        font-size: 16px;
+    }
+    
+    .contact-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    /* Kraj vas dom */
+    
+    /* Stanovi */
+    .apartments-grid {
+        grid-template-columns: 1fr;
+    }
 
     /* Footer */
     .footer-content {

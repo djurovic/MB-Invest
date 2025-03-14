@@ -498,7 +498,11 @@ footer {
     }
     /* Kraj navbara */
 
-
+    /* Konrtak forma */
+    .form-side {
+        padding-right: 0;
+    }
+    /* Kraj kontakt forme */
 
     .contact-form-container {
         flex-direction: column;

@@ -134,6 +134,8 @@ body {
 .project-quote {
     max-width: 900px;
     margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
 }
 
 .project-quote p {
@@ -143,6 +145,60 @@ body {
     font-size: 24px;
     line-height: 1.5;
     letter-spacing: 0px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Bottom left quotation mark */
+.hero-content img:first-of-type {
+    position: absolute;
+    left: -50px;
+    bottom: 25px;
+    z-index: 0;
+}
+
+/* Top right quotation mark */
+.hero-content img:last-of-type {
+    position: absolute;
+    right: -50px;
+    top: 240px;
+    z-index: 0;
+}
+
+
+/* Medju div */
+/* Medju div - Responsive Version */
+.between-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.between-navigation {
+    width: 100%; /* Change from fixed width to responsive */
+    max-width: 821px; /* Maximum width on larger screens */
+    height: auto; /* Change from fixed height to auto */
+    min-height: 70px; /* Minimum height on smaller screens */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px; /* Slightly reduced padding for small screens */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+    flex-wrap: wrap; /* Allow items to wrap on very small screens */
+}
+
+.b-nav-item {
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Responsive font size */
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px; /* Add padding for touch targets */
+    text-align: center; /* Center text if it wraps */
 }
 
 /* O projektu */
@@ -370,7 +426,7 @@ body {
 
 /* Footer styles */
 footer {
-    background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
+    background: linear-gradient(225.52deg, #0B7078 0.45%, #EE5830 100.47%);
     color: white;
     padding: 50px 0 20px;
     margin-top: auto;
@@ -598,6 +654,14 @@ footer {
         width: 95%;
     }
 
+    .between-container {
+        margin-top: -40px; /* Less overlap on smaller screens */
+    }
+    
+    .between-navigation {
+        padding: 12px 15px;
+    }
+
     /*O nama*/
     .container {
         flex-direction: column;
@@ -653,6 +717,22 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+
+    .between-container {
+        margin-top: -30px; /* Even less overlap on mobile */
+        margin-bottom: 30px;
+    }
+    
+    .between-navigation {
+        flex-direction: column; /* Stack items vertically on very small screens */
+        height: auto;
+        padding: 15px;
+        gap: 10px; /* Space between stacked items */
+    }
+    
+    .b-nav-item {
+        width: 100%;
+    }
     footer {
         padding: 30px 0 15px;
     }

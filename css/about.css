@@ -150,7 +150,9 @@ body {
 
 .hero-stats {
     display: flex;
-    gap: 50px;
+    gap: 150px;
+    position: relative;
+    margin-top: 40px;
 }
 
 .stat {
@@ -163,33 +165,33 @@ body {
     font-weight: 700;
     color: #D9D9D9;
     line-height: 1;
+    /* Create a gradient mask that makes the bottom part transparent */
+    -webkit-mask-image: linear-gradient(to bottom, 
+        black 0%, 
+        black 70%, /* Adjust this percentage to control where the fade starts */
+        transparent 100%);
+    mask-image: linear-gradient(to bottom right, 
+        black 0%, 
+        black 80%, 
+        transparent 0%);
 }
 
 .stat-label {
     position: absolute;
-    bottom: 10px;
-    right: 0;
-    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    /* bottom: 10px;
+    right: 0; */
+    bottom: 30px;
+    left: 50px;
+    /* font-size: clamp(1.2rem, 2.5vw, 2rem); */
+    font-size: 24px;
     text-transform: uppercase;
     color: white;
-    font-weight: 500; /* Made slightly bolder to stand out */
+    font-weight: 500;
     padding: 5px 15px;
-    z-index: 2;
-    mix-blend-mode: multiply; /* This helps blend with background while hiding content behind */
-    backdrop-filter: blur(2px); /* Slight blur effect for better readability */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Text shadow to help readability */
+    
+    z-index: 2; /* Ensure label is above the faded number */
 }
 
-.stat-label::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(29, 54, 56, 0.4), rgba(29, 54, 56, 0.7));
-    z-index: -1;
-}
 
 /*O nama*/
 .container {
@@ -277,7 +279,7 @@ body {
 
 /* Footer styles */
 footer {
-    background: linear-gradient(90deg, #EE5830 0%, #1D3638 100%);
+    background: linear-gradient(225.52deg, #0B7078 0.45%, #EE5830 100.47%);
     color: white;
     padding: 50px 0 20px;
     margin-top: auto;
